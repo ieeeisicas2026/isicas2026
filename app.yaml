@@ -1,3 +1,5 @@
----
+name: isicas2026
+app_id: da_KD4Iat7UEJWB
+owner: ieeeisicas2026
+package: '.'
 kind: wasmer.io/App.v0
-package: .
