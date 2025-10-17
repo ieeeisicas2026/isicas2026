@@ -1,3 +1,16 @@
+# build output
+dist/
+/bcms
+
+# generated types
+.astro/
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
 # Logs
 logs
 *.log
@@ -78,6 +91,7 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+.env.production
 
 # build output
 build/

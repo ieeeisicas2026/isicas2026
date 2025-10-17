@@ -1,4 +1,8 @@
-This is a [Astro](https://nextjs.org/) starter kit bootstrapped with `npm create astro@latest -- --template basics`.
+https://github.com/bcms/starters/assets/15079459/ceed3ea4-c6c6-40f7-9e18-746874015120
+
+# BCMS Conference for Astro.js
+
+This is an Astro.js starter kit for BCMS, a headless CMS. It's minimal but solid, with a clean codebase that hooks directly into your BCMS project, ready to extend and scale as needed.
 
 ## Getting Started
 
@@ -16,7 +20,6 @@ wasmer run . -- --port 3000
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 
 ## Deploy on Wasmer Edge
 
@@ -70,3 +73,13 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+---
+
+### Useful links:
+
+-   [BCMS website](https://thebcms.com/)
+-   [BCMS documentation](https://thebcms.com/docs/)
+-   [BCMS and Astro integration](https://thebcms.com/docs/integrations/astro)
+-   [All BCMS starters](https://thebcms.com/starters)
+-   [Join our Discord](https://discord.com/invite/SYBY89ccaR)

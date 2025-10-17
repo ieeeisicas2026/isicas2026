@@ -1,0 +1,99 @@
+import { SwiperSlide, Swiper } from 'swiper/react';
+import { A11y, Pagination } from 'swiper/modules';
+import SwiperCore from 'swiper';
+import { BCMSImage } from '@thebcms/components-react';
+import './organizers.css';
+import type {
+    PropMediaDataParsed,
+    PropRichTextDataParsed,
+} from '@thebcms/types';
+import type { OrganizerGroup } from '../../../bcms/types/ts';
+import type { ClientConfig } from '@thebcms/client';
+import ContentManager from '../ContentManager';
+
+interface Props {
+    title: string;
+    description: PropRichTextDataParsed;
+    cover: PropMediaDataParsed;
+    organizers: OrganizerGroup[];
+    bcmsConfig: ClientConfig;
+}
+
+SwiperCore.use([A11y, Pagination]);
+
+const sliderOptions = {
+    slidesPerView: 1,
+    watchOverflow: true,
+    grabCursor: true,
+    spaceBetween: 20,
+    pagination: {
+        el: '.homeOrganizers--pagination',
+        clickable: true,
+    },
+};
+
+const HomeOrganizers: React.FC<Props> = ({
+    title,
+    description,
+    cover,
+    organizers,
+    bcmsConfig,
+}) => {
+    return (
+        <section className="pb-16 lg:pb-[136px]">
+            <div className="container">
+                <div className="container">
+                    <div className="px-4 mb-[14px] lg:px-16 lg:mb-24 xl:mb-12">
+                        <div className="relative aspect-[1.78] lg:aspect-[1.78]">
+                            <BCMSImage
+                                media={cover}
+                                clientConfig={bcmsConfig}
+                                className="relative z-10 size-full object-cover"
+                            />
+                            <div className="absolute -top-4 -left-4 w-[163px] aspect-square bg-[#ADAF00] lg:w-[416px] xl:w-[544px] lg:-top-16 lg:-left-16" />
+                            <div className="absolute bottom-0 -right-4 w-[163px] aspect-square bg-[#F8C12F] lg:w-[416px] xl:w-[544px] lg:-right-16 -mb-4 lg:-mb-16 xl:-mb-16" />
+                        </div>
+                    </div>
+                </div>
+                <div className="px-4 lg:px-16">
+                    <div id="organizers" className="scroll-mt-24 md:scroll-mt-32 leading-none tracking-[-0.02em] font-semibold mb-3 lg:text-5xl lg:leading-none lg:mb-6">
+                        <h2>{title}</h2>
+                    </div>
+                    <ContentManager
+                        items={description.nodes}
+                        className="text-sm leading-[1.4] font-medium tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[88px]"
+                    />
+                    <Swiper {...sliderOptions} className="mb-8 lg:mb-16">
+                        {organizers &&
+                            organizers.map((organizer, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="flex items-center mb-5 lg:mb-14">
+                                        <BCMSImage
+                                            media={organizer.avatar_image}
+                                            clientConfig={bcmsConfig}
+                                            className="w-8 h-8 object-cover rounded-full overflow-hidden mr-3 lg:w-24 lg:h-24 lg:mr-6"
+                                        />
+                                        <div>
+                                            <div className="text-sm leading-none tracking-[-0.04em] font-medium mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
+                                                {organizer.name}
+                                            </div>
+                                            <div className="text-xs leading-none tracking-[-0.05em] font-medium text-appGray-500 lg:text-2xl lg:leading-none">
+                                                {organizer.role}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ContentManager
+                                        items={organizer.biography.nodes}
+                                        className="homeOrganizers--rt mb-4 lg:mb-12"
+                                    />
+                                </SwiperSlide>
+                            ))}
+                    </Swiper>
+                    <div className="homeOrganizers--pagination swiper--customPagination" />
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default HomeOrganizers;
