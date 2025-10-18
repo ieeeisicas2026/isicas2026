@@ -66,8 +66,10 @@ jobs:
       with:
         name: node-app
 
-    - name: Install Wasmer CLI
-      run: curl https://wasmer.io/install | sh
+    - name: Setup Wasmer
+      uses: wasmerio/setup-wasmer@v3.1
+      with:
+        version: '6.0.1'
 
     - name: Deploy to Wasmer Edge
       run: wasmer deploy
