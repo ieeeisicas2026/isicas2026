@@ -47,6 +47,10 @@ jobs:
         BCMS_INSTANCE_ID: ${{ secrets.BCMS_INSTANCE_ID }}
         BCMS_API_KEY_ID: ${{ secrets.BCMS_API_KEY_ID }}
         BCMS_API_KEY_SECRET: ${{ secrets.BCMS_API_KEY_SECRET }}
+        PUBLIC_BCMS_ORG_ID: 68e3c74bea1914cdebd7fb15
+        PUBLIC_BCMS_INSTANCE_ID: 68f0c0196bb9a9ccb70dddac
+        PUBLIC_BCMS_API_KEY_ID: 68f0c0206bb9a9ccb70dddcd
+        PUBLIC_BCMS_API_KEY_SECRET: 85a30f8e27c1a28108a6c23fdfe10fe82cdf7006c25635817330daa76c49421a
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v4
       with:
