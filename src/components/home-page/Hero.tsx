@@ -58,7 +58,7 @@ const HomeHero: React.FC<Props> = ({
 
     return (
         <section className="overflow-hidden">
-            <div className="relative aspect-[1.74] bg-appGray-300 lg:aspect-[1.8]">
+            <div className="relative aspect-[1.74] bg-appGray-300 lg:aspect-[2] xl:aspect-[2] 2xl:aspect-[3]">
                 <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 container h-full">
                     <div className="h-full flex flex-col items-left justify-center">
                         <div className="text-[32px] leading-none tracking-[-0.41px] text-white mb-3 lg:text-[100px] lg:leading-none lg:mb-8 drop-shadow-xl">
