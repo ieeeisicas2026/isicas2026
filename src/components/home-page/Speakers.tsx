@@ -22,7 +22,7 @@ interface Props {
 SwiperCore.use([A11y, Pagination]);
 
 const sliderOptions = {
-    slidesPerView: 1,
+    slidesPerView: 1.25,
     watchOverflow: true,
     grabCursor: true,
     spaceBetween: 20,
@@ -50,7 +50,7 @@ const HomeSpeakers: React.FC<Props> = ({
                                 clientConfig={bcmsConfig}
                                 className="relative z-10 size-full object-cover"
                             />
-                            <div className="absolute -top-4 -left-4 w-[163px] aspect-square bg-[#00A6AA] lg:w-[416px] xl:w-[544px] lg:-top-16 lg:-left-16" />
+                            <div className="absolute -top-4 -left-4 w-[163px] aspect-square bg-[#5284C4] lg:w-[416px] xl:w-[544px] lg:-top-16 lg:-left-16" />
                             <div className="absolute bottom-0 -right-4 w-[163px] aspect-square bg-appAccent lg:w-[416px] xl:w-[544px] lg:-right-16 -mb-4 lg:-mb-16 xl:-mb-16" />
                         </div>
                     </div>
@@ -68,12 +68,14 @@ const HomeSpeakers: React.FC<Props> = ({
                             speakers.map((speaker, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="flex items-center mb-5 lg:mb-14">
-                                        <BCMSImage
-                                            media={speaker.avatar_image}
-                                            clientConfig={bcmsConfig}
-                                            className="w-8 h-8 object-cover rounded-full overflow-hidden mr-3 lg:w-24 lg:h-24 lg:mr-6"
-                                        />
-                                        <div>
+                                        <div class="shrink-0">
+                                            <BCMSImage
+                                                media={speaker.avatar_image}
+                                                clientConfig={bcmsConfig}
+                                                className="w-8 h-8 object-cover rounded-full overflow-hidden mr-3 lg:w-24 lg:h-24 lg:mr-6"
+                                            />
+                                        </div>
+                                        <div class="shrink">
                                             <div className="text-sm leading-none tracking-[-0.04em] font-medium mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
                                                 {speaker.name}
                                             </div>

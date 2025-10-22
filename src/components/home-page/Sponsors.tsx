@@ -71,7 +71,7 @@ const HomeSponsors: React.FC<Props> = ({ title, sponsors, bcmsConfig }) => {
                         {filteredSponsors.length &&
                             filteredSponsors.map((sponsor, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="flex items-center justify-center w-[295px] aspect-[2.17] rounded-lg bg-white mx-auto mb-6 lg:w-[462px] lg:aspect-[1.7] lg:rounded-2xl lg:mb-12">
+                                    <div className="flex items-center justify-center w-[384px] aspect-[2.17] rounded-lg bg-white mx-auto mb-6 lg:w-[462px] lg:aspect-[1.7] lg:rounded-2xl lg:mb-12">
                                         <BCMSImage
                                             media={sponsor.cover_image}
                                             clientConfig={bcmsConfig}

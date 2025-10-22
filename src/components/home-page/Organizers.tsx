@@ -50,8 +50,8 @@ const HomeOrganizers: React.FC<Props> = ({
                                 clientConfig={bcmsConfig}
                                 className="relative z-10 size-full object-cover"
                             />
-                            <div className="absolute -top-4 -left-4 w-[163px] aspect-square bg-[#ADAF00] lg:w-[416px] xl:w-[544px] lg:-top-16 lg:-left-16" />
-                            <div className="absolute bottom-0 -right-4 w-[163px] aspect-square bg-[#F8C12F] lg:w-[416px] xl:w-[544px] lg:-right-16 -mb-4 lg:-mb-16 xl:-mb-16" />
+                            <div className="absolute -top-4 -left-4 w-[163px] aspect-square bg-[#5284C4] lg:w-[416px] xl:w-[544px] lg:-top-16 lg:-left-16" />
+                            <div className="absolute bottom-0 -right-4 w-[163px] aspect-square bg-[#004C59] lg:w-[416px] xl:w-[544px] lg:-right-16 -mb-4 lg:-mb-16 xl:-mb-16" />
                         </div>
                     </div>
                 </div>
@@ -63,17 +63,17 @@ const HomeOrganizers: React.FC<Props> = ({
                         items={description.nodes}
                         className="text-sm leading-[1.4] font-medium tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[88px]"
                     />
-                    <Swiper {...sliderOptions} className="mb-8 lg:mb-16">
                         {organizers &&
                             organizers.map((organizer, index) => (
-                                <SwiperSlide key={index}>
                                     <div className="flex items-center mb-5 lg:mb-14">
-                                        <BCMSImage
-                                            media={organizer.avatar_image}
-                                            clientConfig={bcmsConfig}
-                                            className="w-8 h-8 object-cover rounded-full overflow-hidden mr-3 lg:w-24 lg:h-24 lg:mr-6"
-                                        />
-                                        <div>
+                                        <div class="shrink-0">
+                                            <BCMSImage
+                                                media={organizer.avatar_image}
+                                                clientConfig={bcmsConfig}
+                                                className="w-16 h-16 object-cover rounded-full overflow-hidden mr-3 lg:w-24 lg:h-24 lg:mr-6"
+                                            />
+                                        </div>
+                                        <div class="shrink">
                                             <div className="text-sm leading-none tracking-[-0.04em] font-medium mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
                                                 {organizer.name}
                                             </div>
@@ -82,14 +82,7 @@ const HomeOrganizers: React.FC<Props> = ({
                                             </div>
                                         </div>
                                     </div>
-                                    <ContentManager
-                                        items={organizer.biography.nodes}
-                                        className="homeOrganizers--rt mb-4 lg:mb-12"
-                                    />
-                                </SwiperSlide>
                             ))}
-                    </Swiper>
-                    <div className="homeOrganizers--pagination swiper--customPagination" />
                 </div>
             </div>
         </section>

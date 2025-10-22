@@ -4,7 +4,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                appAccent: '#003b75',
+                appAccent: '#004C59',
                 appBody: '#F2F2F2',
                 appText: '#000000',
                 appGray: {
@@ -17,7 +17,7 @@ export default {
                 },
             },
             fontFamily: {
-                inter: ['Inter', 'sans-serif'],
+                inter: ['Montserrat', 'sans-serif'],
             },
             container: {
                 center: true,

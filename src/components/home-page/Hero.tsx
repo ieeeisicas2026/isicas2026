@@ -58,8 +58,27 @@ const HomeHero: React.FC<Props> = ({
 
     return (
         <section className="overflow-hidden">
-            <div className="container mb-10 lg:mb-16">
-                <Logo className="w-auto h-10 relative left-1/2 -translate-x-1/2 mb-10 lg:h-[72px] lg:mb-[55px]" />
+            <div className="relative aspect-[1.74] bg-appGray-300 lg:aspect-[1.8]">
+                <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 container h-full">
+                    <div className="h-full flex flex-col items-left justify-center">
+                        <div className="text-[32px] leading-none tracking-[-0.41px] text-white mb-3 lg:text-[100px] lg:leading-none lg:mb-8 drop-shadow-xl">
+                            <span class="font-extrabold">IEEE ISICAS</span> <span class="font-light">2026</span>
+                        </div>
+                        <div className="text-[16px] leading-none tracking-[-0.41px] font-light text-white mb-3 lg:text-[50px] lg:leading-none lg:mb-8 drop-shadow-xl text-shadow-lg">
+                            The IEEE International Symposium on Integrated Circuits and Systems at KAUST
+                        </div>
+                        <div className="text-sm leading-none tracking-[-0.41px] text-white lg:text-2xl lg:leading-none drop-shadow-lg text-shadow-lg">
+                            <span class="font-bold">{timerOutput}</span> until November 22, 2026
+                        </div>
+                    </div>
+                </div>
+                <BCMSImage
+                    media={cover}
+                    clientConfig={bcmsConfig}
+                    className="size-full object-cover"
+                />
+            </div>
+            <div className="container mb-10 lg:mb-16 mt-8">
                 <div className="lg:grid lg:grid-cols-[1fr,auto] lg:items-center lg:gap-x-[30px] lg:gap-y-[55px]">
                     <div className="flex items-center gap-1 max-lg:mb-6 lg:gap-2.5 lg:col-start-1 lg:row-start-1">
                         {gallery.map((image, index) => (
@@ -78,11 +97,11 @@ const HomeHero: React.FC<Props> = ({
                         className="[&_strong]:text-appText [&_strong]:font-medium text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 max-lg:mb-8 lg:col-start-1 lg:row-start-2 lg:text-[26px] lg:leading-[1.4]"
                     />
                     <a
-                        href="#registration"
+                        href="#submissions"
                         className="flex items-center px-5 py-[13px] bg-black rounded-[48px] lg:col-start-2 lg:row-start-1 lg:px-[26px] lg:py-[19px]"
                     >
                         <span className="text-sm leading-none tracking-[-0.41px] font-semibold text-white mr-2 lg:text-lg lg:leading-none">
-                            Register now
+                            Submissions
                         </span>
                         <svg
                             className="!w-[14px] !h-[14px] text-white !lg:w-[18px] lg:h-[18px]"
@@ -100,23 +119,6 @@ const HomeHero: React.FC<Props> = ({
                         (scroll)
                     </div>
                 </div>
-            </div>
-            <div className="relative aspect-[1.74] bg-appGray-300 lg:aspect-[1.8]">
-                <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 container h-full">
-                    <div className="h-full flex flex-col items-center justify-center">
-                        <div className="text-[32px] leading-none tracking-[-0.41px] font-medium text-white mb-3 lg:text-[100px] lg:leading-none lg:mb-8 drop-shadow-xl">
-                            {timerOutput}
-                        </div>
-                        <div className="text-sm leading-none font-medium tracking-[-0.41px] text-white lg:text-2xl lg:leading-none text-shadow-lg">
-                            Until ISICAS 2026, November 22
-                        </div>
-                    </div>
-                </div>
-                <BCMSImage
-                    media={cover}
-                    clientConfig={bcmsConfig}
-                    className="size-full object-cover"
-                />
             </div>
         </section>
     );
