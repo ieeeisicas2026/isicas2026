@@ -9,6 +9,7 @@ import Layout from '../layouts/Layout.astro';
 import HomeHero from '../components/home-page/Hero';
 import HomeAbout from '../components/home-page/About';
 import HomeSubmissions from '../components/home-page/Submissions';
+import HomeTravel from '../components/home-page/Travel';
 import PageWrapper from '../components/PageWrapper';
 import HomeSpeakers from '../components/home-page/Speakers';
 import HomeSponsors from '../components/home-page/Sponsors';
@@ -53,6 +54,12 @@ const bcmsConfig = bcmsPublic.getConfig();
         <HomeSubmissions
             title={homePageMeta.submissions_title}
             description={homePageMeta.submissions_description}
+            bcmsConfig={bcmsConfig}
+            client:load
+        />
+        <HomeTravel
+            title={homePageMeta.travel_title}
+            description={homePageMeta.travel_description}
             bcmsConfig={bcmsConfig}
             client:load
         />
