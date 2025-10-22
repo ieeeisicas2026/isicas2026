@@ -1,8 +1,5 @@
 import ArrowIcon from '../../assets/icons/arrow.svg?raw';
-import type { ClientConfig } from '@thebcms/client';
-import { BCMSImage } from '@thebcms/components-react';
 import type {
-    PropMediaDataParsed,
     PropRichTextDataParsed,
 } from '@thebcms/types';
 import ContentManager from '../ContentManager';
