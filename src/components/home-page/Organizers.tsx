@@ -62,7 +62,7 @@ const HomeOrganizers: React.FC<Props> = ({
                                             <div className="text-sm leading-none tracking-[-0.04em] mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
                                                 {organizer.name}
                                             </div>
-                                            <div className="text-xs leading-none tracking-[-0.05em] text-appGray-500 lg:text-2xl lg:leading-none">
+                                            <div className="text-xs tracking-[-0.05em] text-appGray-500 lg:text-2xl">
                                                 {organizer.role}
                                             </div>
                                         </div>
