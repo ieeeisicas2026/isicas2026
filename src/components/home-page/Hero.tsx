@@ -62,13 +62,13 @@ const HomeHero: React.FC<Props> = ({
                 <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 container h-full">
                     <div className="h-full flex flex-col items-left justify-center">
                         <div className="text-[32px] leading-none tracking-[-0.41px] text-white mb-3 lg:text-[100px] lg:leading-none lg:mb-8 drop-shadow-xl">
-                            <span class="font-extrabold">IEEE ISICAS</span> <span class="font-light">2026</span>
+                            <span className="font-extrabold">IEEE ISICAS</span> <span className="font-light">2026</span>
                         </div>
                         <div className="text-[16px] leading-none tracking-[-0.41px] font-light text-white mb-3 lg:text-[50px] lg:leading-none lg:mb-8 drop-shadow-xl text-shadow-lg">
                             The IEEE International Symposium on Integrated Circuits and Systems at KAUST
                         </div>
                         <div className="text-sm leading-none tracking-[-0.41px] text-white lg:text-2xl lg:leading-none drop-shadow-lg text-shadow-lg">
-                            <span class="font-bold">{timerOutput}</span> until November 22, 2026
+                            <span className="font-bold">{timerOutput}</span> until November 22, 2026
                         </div>
                     </div>
                 </div>

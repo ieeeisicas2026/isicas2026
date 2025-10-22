@@ -66,14 +66,14 @@ const HomeOrganizers: React.FC<Props> = ({
                         {organizers &&
                             organizers.map((organizer, index) => (
                                     <div className="flex items-center mb-5 lg:mb-14">
-                                        <div class="shrink-0">
+                                        <div className="shrink-0">
                                             <BCMSImage
                                                 media={organizer.avatar_image}
                                                 clientConfig={bcmsConfig}
                                                 className="w-16 h-16 object-cover rounded-full overflow-hidden mr-3 lg:w-24 lg:h-24 lg:mr-6"
                                             />
                                         </div>
-                                        <div class="shrink">
+                                        <div className="shrink">
                                             <div className="text-sm leading-none tracking-[-0.04em] font-medium mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
                                                 {organizer.name}
                                             </div>
