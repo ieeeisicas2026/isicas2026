@@ -1,6 +1,3 @@
-import { SwiperSlide, Swiper } from 'swiper/react';
-import { A11y, Pagination } from 'swiper/modules';
-import SwiperCore from 'swiper';
 import { BCMSImage } from '@thebcms/components-react';
 import './organizers.css';
 import type {
@@ -18,19 +15,6 @@ interface Props {
     organizers: OrganizerGroup[];
     bcmsConfig: ClientConfig;
 }
-
-SwiperCore.use([A11y, Pagination]);
-
-const sliderOptions = {
-    slidesPerView: 1,
-    watchOverflow: true,
-    grabCursor: true,
-    spaceBetween: 20,
-    pagination: {
-        el: '.homeOrganizers--pagination',
-        clickable: true,
-    },
-};
 
 const HomeOrganizers: React.FC<Props> = ({
     title,
@@ -61,7 +45,7 @@ const HomeOrganizers: React.FC<Props> = ({
                     </div>
                     <ContentManager
                         items={description.nodes}
-                        className="text-sm leading-[1.4] font-medium tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[88px]"
+                        className="text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[88px]"
                     />
                         {organizers &&
                             organizers.map((organizer, index) => (
@@ -75,10 +59,10 @@ const HomeOrganizers: React.FC<Props> = ({
                                             />
                                         </div>
                                         <div className="shrink">
-                                            <div className="text-sm leading-none tracking-[-0.04em] font-medium mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
+                                            <div className="text-sm leading-none tracking-[-0.04em] mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
                                                 {organizer.name}
                                             </div>
-                                            <div className="text-xs leading-none tracking-[-0.05em] font-medium text-appGray-500 lg:text-2xl lg:leading-none">
+                                            <div className="text-xs leading-none tracking-[-0.05em] text-appGray-500 lg:text-2xl lg:leading-none">
                                                 {organizer.role}
                                             </div>
                                         </div>

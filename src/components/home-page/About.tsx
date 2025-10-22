@@ -41,7 +41,7 @@ const HomeAbout: React.FC<Props> = ({
                 />
                 <ContentManager
                     items={description.nodes}
-                    className="text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 font-medium mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[112px]"
+                    className="text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[112px]"
                 />
                 <div className="flex flex-wrap justify-around gap-x-14 gap-y-8 lg:justify-center lg:gap-x-16">
                     {topics.map((topic, index) => (

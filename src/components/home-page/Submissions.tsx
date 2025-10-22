@@ -10,13 +10,11 @@ import ContentManager from '../ContentManager';
 interface Props {
     title: string;
     description: PropRichTextDataParsed;
-    bcmsConfig: ClientConfig;
 }
 
 const HomeSubmissions: React.FC<Props> = ({
     title,
     description,
-    bcmsConfig,
 }) => {
     return (
         <section className="pt-8 pb-16 lg:pt-[120px] lg:pb-[120px]">
@@ -32,7 +30,7 @@ const HomeSubmissions: React.FC<Props> = ({
                 </div>
                 <ContentManager
                     items={description.nodes}
-                    className="text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 font-medium mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[112px]"
+                    className="text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[112px]"
                 />
             </div>
         </section>

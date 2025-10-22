@@ -54,7 +54,7 @@ const HomeAgenda: React.FC<Props> = ({ title, days }) => {
                         {days.map((day, index) => (
                             <button
                                 className={classNames(
-                                    'flex px-2 py-[5px] rounded-[25px] text-sm leading-none tracking-[-0.04em] font-medium lg:px-[15px] lg:py-2.5 lg:text-xl lg:leading-none',
+                                    'flex px-2 py-[5px] rounded-[25px] text-sm leading-none tracking-[-0.04em] lg:px-[15px] lg:py-2.5 lg:text-xl lg:leading-none',
                                     {
                                         'text-white bg-[#004C59] font-semibold':
                                             activeSlide === index,
@@ -84,18 +84,18 @@ const HomeAgenda: React.FC<Props> = ({ title, days }) => {
                                         key={itemItem}
                                         className="grid grid-cols-[70px,1fr] lg:grid-cols-[295px,1fr]"
                                     >
-                                        <div className="text-sm leading-none tracking-[-0.04em] font-medium text-appGray-600 lg:text-2xl lg:leading-none">
+                                        <div className="text-sm leading-none tracking-[-0.04em] text-appGray-600 lg:text-2xl lg:leading-none">
                                             {item.hours}
                                         </div>
                                         <div>
-                                            <div className="text-xs leading-none font-medium tracking-[-0.04em] text-appGray-600 mb-3 lg:text-xl lg:leading-none lg:mb-4">
+                                            <div className="text-xs leading-none tracking-[-0.04em] text-appGray-600 mb-3 lg:text-xl lg:leading-none lg:mb-4">
                                                 {item.title}
                                             </div>
                                             <ContentManager
                                                 items={item.description.nodes}
-                                                className="text-sm leading-[1.4] tracking-[-0.41px] font-medium text-appGray-500 mb-4 lg:text-xl lg:leading-[1.4] lg:mb-6"
+                                                className="text-sm leading-[1.4] tracking-[-0.41px] text-appGray-500 mb-4 lg:text-xl lg:leading-[1.4] lg:mb-6"
                                             />
-                                            <div className="text-sm leading-none tracking-[-0.04em] font-medium text-appGray-600 lg:text-2xl lg:leading-none">
+                                            <div className="text-sm leading-none tracking-[-0.04em] text-appGray-600 lg:text-2xl lg:leading-none">
                                                 Location: {item.location}
                                             </div>
                                         </div>

@@ -27,7 +27,7 @@ const HomeTickets: React.FC<Prop> = ({
                 </div>
                 <ContentManager
                     items={description.nodes}
-                    className="text-sm leading-[1.4] font-medium tracking-[-0.41px] text-appGray-500 max-w-[823px] mx-auto mb-10 lg:text-2xl lg:leading-none lg:mb-16"
+                    className="text-sm leading-[1.4] tracking-[-0.41px] text-appGray-500 max-w-[823px] mx-auto mb-10 lg:text-2xl lg:leading-none lg:mb-16"
                 />
                 <div className="grid grid-cols-1 gap-4 lg:gap-16">
                     {tickets &&
@@ -65,7 +65,7 @@ const HomeTickets: React.FC<Prop> = ({
                                             {ticket.discount_price && (
                                                 <div
                                                     className={classNames(
-                                                        'text-sm leading-none tracking-[-0.04em] font-medium line-through opacity-50 lg:text-5xl lg:leading-none',
+                                                        'text-sm leading-none tracking-[-0.04em] line-through opacity-50 lg:text-5xl lg:leading-none',
                                                         {
                                                             'text-white':
                                                                 ticket.theme ===
@@ -90,7 +90,7 @@ const HomeTickets: React.FC<Prop> = ({
                                                 },
                                             )}
                                         >
-                                            <span className="text-sm leading-none tracking-[-0.41px] font-medium mr-2 lg:text-lg lg:leading-none">
+                                            <span className="text-sm leading-none tracking-[-0.41px] mr-2 lg:text-lg lg:leading-none">
                                                 Register now
                                             </span>
                                             <svg

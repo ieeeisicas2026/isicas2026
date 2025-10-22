@@ -68,7 +68,7 @@ const HomeSpeakers: React.FC<Props> = ({
                     </div>
                     <ContentManager
                         items={description.nodes}
-                        className="text-sm leading-[1.4] font-medium tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[88px]"
+                        className="text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[88px]"
                     />
                     <Swiper {...sliderOptions} className="mb-8 lg:mb-16">
                         {speakers &&
@@ -83,10 +83,10 @@ const HomeSpeakers: React.FC<Props> = ({
                                             />
                                         </div>
                                         <div className="shrink">
-                                            <div className="text-sm leading-none tracking-[-0.04em] font-medium mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
+                                            <div className="text-sm leading-none tracking-[-0.04em] mb-1.5 lg:text-[32px] lg:leading-none lg:mb-[14px]">
                                                 {speaker.name}
                                             </div>
-                                            <div className="text-xs leading-none tracking-[-0.05em] font-medium text-appGray-500 lg:text-2xl lg:leading-none">
+                                            <div className="text-xs leading-none tracking-[-0.05em] text-appGray-500 lg:text-2xl lg:leading-none">
                                                 {speaker.role}
                                             </div>
                                         </div>

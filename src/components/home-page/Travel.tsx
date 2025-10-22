@@ -38,7 +38,7 @@ const HomeTravel: React.FC<Props> = ({
                 </div>
             </div>
             <div className="relative aspect-[1.74] bg-appGray-300 mb-8 lg:aspect-[2] xl:aspect-[2] 2xl:aspect-[3]">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50"></div>
                 <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 container h-full">
                     <div className="h-full flex flex-col items-left justify-end">
                         <div className="text-[32px] leading-none tracking-[-0.41px] text-white mb-3 lg:text-[50px] lg:leading-none lg:mb-8 drop-shadow-xl">
@@ -58,7 +58,7 @@ const HomeTravel: React.FC<Props> = ({
             <div className="container">
                 <ContentManager
                     items={description.nodes}
-                    className="text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 font-medium mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[112px]"
+                    className="text-sm leading-[1.4] tracking-[-0.8px] text-appGray-500 mb-6 lg:text-[26px] lg:leading-[1.4] lg:mb-[112px]"
                 />
             </div>
         </section>

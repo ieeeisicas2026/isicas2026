@@ -80,7 +80,7 @@ const HomeSponsors: React.FC<Props> = ({ title, sponsors, bcmsConfig }) => {
                                     </div>
                                     <ContentManager
                                         items={sponsor.description.nodes}
-                                        className="text-sm leading-[1.4] tracking-[-0.8px] font-medium text-center text-appGray-500 max-w-[1152px] mx-auto lg:text-[26px] lg:leading-[1.4]"
+                                        className="text-sm leading-[1.4] tracking-[-0.8px] text-center text-appGray-500 max-w-[1152px] mx-auto lg:text-[26px] lg:leading-[1.4]"
                                     />
                                 </SwiperSlide>
                             ))}
