@@ -54,9 +54,9 @@ const HomeAgenda: React.FC<Props> = ({ title, days }) => {
                         {days.map((day, index) => (
                             <button
                                 className={classNames(
-                                    'flex px-2 py-[5px] rounded-[25px] text-sm leading-none tracking-[-0.04em] font-medium text-[#388045] lg:px-[15px] lg:py-2.5 lg:text-xl lg:leading-none',
+                                    'flex px-2 py-[5px] rounded-[25px] text-sm leading-none tracking-[-0.04em] font-medium lg:px-[15px] lg:py-2.5 lg:text-xl lg:leading-none',
                                     {
-                                        'text-[#388045] bg-[#6BCD7D1A] font-semibold':
+                                        'text-white bg-[#004C59] font-semibold':
                                             activeSlide === index,
                                         'text-appGray-600 font-medium':
                                             activeSlide !== index,

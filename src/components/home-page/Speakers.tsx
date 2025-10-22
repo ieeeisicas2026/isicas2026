@@ -1,3 +1,4 @@
+import ArrowIcon from '../../assets/icons/arrow.svg?raw';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { A11y, Pagination } from 'swiper/modules';
 import SwiperCore from 'swiper';
@@ -43,7 +44,7 @@ const HomeSpeakers: React.FC<Props> = ({
         <section className="pb-16 lg:pb-[136px]">
             <div className="container">
                 <div className="container">
-                    <div className="px-4 mb-[14px] lg:px-16 lg:mb-24 xl:mb-12">
+                    <div className="px-4 mb-[24px] lg:px-16 lg:mb-24 xl:mb-48">
                         <div className="relative aspect-[1.78] lg:aspect-[1.78]">
                             <BCMSImage
                                 media={cover}
@@ -56,8 +57,14 @@ const HomeSpeakers: React.FC<Props> = ({
                     </div>
                 </div>
                 <div className="px-4 lg:px-16">
-                    <div id="speakers" className="scroll-mt-24 md:scroll-mt-32 leading-none tracking-[-0.02em] font-semibold mb-3 lg:text-5xl lg:leading-none lg:mb-6">
-                        <h2>{title}</h2>
+                    <div className="flex items-center justify-between mb-4 lg:mb-[72px]">
+                        <h2 id="speakers" className="scroll-mt-24 md:scroll-mt-32 leading-none tracking-[-0.05em] font-semibold lg:text-[104px] lg:leading-none">
+                            <h2>{title}</h2>
+                        </h2>
+                        <div
+                            dangerouslySetInnerHTML={{ __html: ArrowIcon }}
+                            className="w-4 h-4 lg:w-[100px] lg:h-[104px]"
+                        />
                     </div>
                     <ContentManager
                         items={description.nodes}

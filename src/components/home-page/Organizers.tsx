@@ -65,6 +65,7 @@ const HomeOrganizers: React.FC<Props> = ({
                     />
                         {organizers &&
                             organizers.map((organizer, index) => (
+                                <div key={index}>
                                     <div className="flex items-center mb-5 lg:mb-14">
                                         <div className="shrink-0">
                                             <BCMSImage
@@ -82,6 +83,7 @@ const HomeOrganizers: React.FC<Props> = ({
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                             ))}
                 </div>
             </div>
