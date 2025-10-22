@@ -51,6 +51,17 @@ const Header: React.FC = () => {
                                 </li>
                                 <li className="flex items-center gap-4 md:before:w-1 md:before:h-1 md:before:mt-1 md:before:rounded-full md:before:bg-appGray-700">
                                     <a
+                                        href="#travel"
+                                        className="flex leading-none py-2 transition-colors duration-300 md:hover:text-appText"
+                                        onClick={() =>
+                                            setShowMobileMenu((prevState) => !prevState)
+                                        }
+                                    >
+                                        Travel
+                                    </a>
+                                </li>
+                                <li className="flex items-center gap-4 md:before:w-1 md:before:h-1 md:before:mt-1 md:before:rounded-full md:before:bg-appGray-700">
+                                    <a
                                         href="#speakers"
                                         className="flex leading-none py-2 transition-colors duration-300 md:hover:text-appText"
                                         onClick={() =>
@@ -69,17 +80,6 @@ const Header: React.FC = () => {
                                         }
                                     >
                                         Agenda
-                                    </a>
-                                </li>
-                                <li className="flex items-center gap-4 md:before:w-1 md:before:h-1 md:before:mt-1 md:before:rounded-full md:before:bg-appGray-700">
-                                    <a
-                                        href="#travel"
-                                        className="flex leading-none py-2 transition-colors duration-300 md:hover:text-appText"
-                                        onClick={() =>
-                                            setShowMobileMenu((prevState) => !prevState)
-                                        }
-                                    >
-                                        Travel
                                     </a>
                                 </li>
                             </ul>
