@@ -11,6 +11,7 @@ interface Props {
     gallery: PropMediaDataParsed[];
     description: PropRichTextDataParsed;
     cover: PropMediaDataParsed;
+    youtube: string;
     bcmsConfig: ClientConfig;
 }
 
@@ -18,6 +19,7 @@ const HomeHero: React.FC<Props> = ({
     gallery,
     description,
     cover,
+    youtube,
     bcmsConfig,
 }) => {
     const [timerOutput, setTimerOutput] = useState('Loading');
@@ -55,6 +57,18 @@ const HomeHero: React.FC<Props> = ({
             clearInterval(timer);
         };
     }, []);
+
+    const [youtubeVideoId, setYoutubeVideoId] = useState('');
+    useEffect(
+        () => {
+            if (!youtube) return;
+            const regExp =
+              /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+            const match = youtube.match(regExp);
+            setYoutubeVideoId(match && match[7].length === 11 ? match[7] : '');
+        },
+        [youtube]
+    );
 
     return (
         <section className="overflow-hidden">
@@ -119,6 +133,17 @@ const HomeHero: React.FC<Props> = ({
                         (scroll)
                     </div>
                 </div>
+            </div>
+            <div>
+                {youtubeVideoId ? (
+                <iframe
+                src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="aspect-video w-full"
+                title="YouTube video"
+                />
+                ) : null}
             </div>
         </section>
     );

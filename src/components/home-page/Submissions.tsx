@@ -1,4 +1,3 @@
-import ArrowIcon from '../../assets/icons/arrow.svg?raw';
 import type {
     PropRichTextDataParsed,
 } from '@thebcms/types';
@@ -20,10 +19,6 @@ const HomeSubmissions: React.FC<Props> = ({
                     <h2 id="submissions" className="scroll-mt-24 md:scroll-mt-32 leading-none tracking-[-0.05em] font-semibold lg:text-[104px] lg:leading-none">
                         <h2>{title}</h2>
                     </h2>
-                    <div
-                        dangerouslySetInnerHTML={{ __html: ArrowIcon }}
-                        className="w-4 h-4 lg:w-[100px] lg:h-[104px]"
-                    />
                 </div>
                 <ContentManager
                     items={description.nodes}

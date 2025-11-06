@@ -1,4 +1,3 @@
-import ArrowIcon from '../../assets/icons/arrow.svg?raw';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { A11y, Pagination } from 'swiper/modules';
 import SwiperCore from 'swiper';
@@ -61,10 +60,6 @@ const HomeSpeakers: React.FC<Props> = ({
                         <h2 id="speakers" className="scroll-mt-24 md:scroll-mt-32 leading-none tracking-[-0.05em] font-semibold lg:text-[104px] lg:leading-none">
                             <h2>{title}</h2>
                         </h2>
-                        <div
-                            dangerouslySetInnerHTML={{ __html: ArrowIcon }}
-                            className="w-4 h-4 lg:w-[100px] lg:h-[104px]"
-                        />
                     </div>
                     <ContentManager
                         items={description.nodes}

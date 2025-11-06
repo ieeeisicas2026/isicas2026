@@ -1,4 +1,3 @@
-import ArrowIcon from '../../assets/icons/arrow.svg?raw';
 import type { ClientConfig } from '@thebcms/client';
 import { BCMSImage } from '@thebcms/components-react';
 import type {
@@ -31,10 +30,6 @@ const HomeTravel: React.FC<Props> = ({
                     <h2 id="travel" className="scroll-mt-24 md:scroll-mt-32 leading-none tracking-[-0.05em] font-semibold lg:text-[104px] lg:leading-none">
                         <h2>{title}</h2>
                     </h2>
-                    <div
-                        dangerouslySetInnerHTML={{ __html: ArrowIcon }}
-                        className="w-4 h-4 lg:w-[100px] lg:h-[104px]"
-                    />
                 </div>
             </div>
             <div className="relative aspect-[1.74] bg-appGray-300 mb-8 lg:aspect-[2] xl:aspect-[2] 2xl:aspect-[3]">
