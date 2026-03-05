@@ -19,6 +19,20 @@ const HomeTickets: React.FC<Prop> = ({
     tickets,
     bcmsConfig,
 }) => {
+    if (!tickets) { ( 
+        <section className="pb-16 scroll-m-5 lg:pb-[130px]">
+            <div className="container">
+                <div id="registration" className="scroll-mt-24 md:scroll-mt-32 leading-none tracking-[-0.02em] font-semibold text-center mb-3 lg:text-5xl lg:leading-none lg:mb-4">
+                    <h2>{title}</h2>
+                </div>
+                <ContentManager
+                    items={description.nodes}
+                    className="text-sm leading-[1.4] tracking-[-0.41px] text-appGray-500 max-w-[823px] mx-auto mb-10 lg:text-2xl lg:leading-none lg:mb-16"
+                />
+            </div>
+        </section>
+    );
+    }
     return ( 
         <section className="pb-16 scroll-m-5 lg:pb-[130px]">
             <div className="container">
