@@ -25,7 +25,7 @@ const HomeHero: React.FC<Props> = ({
     const [timerOutput, setTimerOutput] = useState('Loading');
 
     useEffect(() => {
-        const untilEvent = new Date(new Date('November 22, 2026 09:00:00 GMT-03:00').getTime());
+        const untilEvent = new Date(new Date('April 13, 2026 09:00:00 GMT-03:00').getTime());
 
         const timer = setInterval(() => {
             const now = new Date().getTime();
@@ -82,7 +82,7 @@ const HomeHero: React.FC<Props> = ({
                             The IEEE International Symposium on Integrated Circuits and Systems at KAUST
                         </div>
                         <div className="text-sm leading-none tracking-[-0.41px] text-white lg:text-2xl lg:leading-none drop-shadow-lg text-shadow-lg">
-                            <span className="font-bold">{timerOutput}</span> until November 22, 2026
+                            <span className="font-bold">{timerOutput}</span> until April 13, 2026 (paper submission deadline) 
                         </div>
                     </div>
                 </div>
