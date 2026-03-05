@@ -3,14 +3,14 @@ import type { PropRichTextDataParsed } from '@thebcms/types';
 import ContentManager from '../ContentManager';
 
 interface Prop {
-    description: PropRichTextDataParsed;
+    description?: PropRichTextDataParsed;
 }
 
 const HomeBanner: React.FC<Prop> = ({
     description,
 }) => {
     if (!description) {
-    return (none);
+    return <section></section>;
     }
 
     return ( 

@@ -9,7 +9,7 @@ import ContentManager from '../ContentManager';
 interface Prop {
     title: string;
     description: PropRichTextDataParsed;
-    tickets: TicketGroup[];
+    tickets?: TicketGroup[];
     bcmsConfig: ClientConfig;
 }
 
