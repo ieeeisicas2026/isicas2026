@@ -8,7 +8,6 @@ interface Prop {
 
 const HomeBanner: React.FC<Prop> = ({
     description,
-    bcmsConfig,
 }) => {
     if (!description) {
     return (none);
