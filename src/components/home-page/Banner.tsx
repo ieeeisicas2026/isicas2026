@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import type { PropRichTextDataParsed } from '@thebcms/types';
 import type { ClientConfig } from '@thebcms/client';
 import ContentManager from '../ContentManager';
