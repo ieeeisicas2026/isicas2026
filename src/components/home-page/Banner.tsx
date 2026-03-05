@@ -1,11 +1,9 @@
 import React from 'react';
 import type { PropRichTextDataParsed } from '@thebcms/types';
-import type { ClientConfig } from '@thebcms/client';
 import ContentManager from '../ContentManager';
 
 interface Prop {
     description: PropRichTextDataParsed;
-    bcmsConfig: ClientConfig;
 }
 
 const HomeBanner: React.FC<Prop> = ({
