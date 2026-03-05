@@ -16,6 +16,7 @@ import HomeSponsors from '../components/home-page/Sponsors';
 import HomeOrganizers from '../components/home-page/Organizers';
 import HomeTickets from '../components/home-page/Tickets';
 import HomeAgenda from '../components/home-page/Agenda';
+import HomeBanner from '../components/home-page/Banner';
 import 'swiper/css';
 import { bcmsPrivate } from '../bcms-private';
 import { bcmsPublic } from '../bcms-public';
@@ -97,6 +98,11 @@ const bcmsConfig = bcmsPublic.getConfig();
         <HomeAgenda
             title={homePageMeta.agenda_title}
             days={homePageMeta.agenda_days}
+            client:load
+        />
+        <HomeBanner
+            description={homePageMeta.banner_floating_bottom}
+            bcmsConfig={bcmsConfig}
             client:load
         />
     </PageWrapper>
