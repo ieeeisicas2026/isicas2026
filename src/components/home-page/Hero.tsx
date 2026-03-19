@@ -79,7 +79,7 @@ const HomeHero: React.FC<Props> = ({
                             <span className="font-extrabold">IEEE ISICAS</span> <span className="font-light">2026</span>
                         </div>
                         <div className="text-[16px] leading-none tracking-[-0.41px] font-light text-white mb-3 lg:text-[50px] lg:leading-none lg:mb-8 drop-shadow-xl text-shadow-lg">
-                            The IEEE International Symposium on Integrated Circuits and Systems at KAUST
+                            The IEEE International Symposium on Integrated Circuits and Systems
                         </div>
                         <div className="text-sm leading-none tracking-[-0.41px] text-white lg:text-2xl lg:leading-none drop-shadow-lg text-shadow-lg">
                             <span className="font-bold">{timerOutput}</span> until April 13, 2026 (paper submission deadline) 
