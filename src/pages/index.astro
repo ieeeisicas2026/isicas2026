@@ -38,6 +38,8 @@ const bcmsConfig = bcmsPublic.getConfig();
 <Layout title={`${homePageMeta.title} - ISICAS 2026`}>
     <PageWrapper legal={legalEntries} client:load>
         <HomeHero
+            counter_date={homePageMeta.hero_counter_date}
+            counter_description={homePageMeta.hero_counter_description}
             gallery={homePageMeta.hero_gallery}
             description={homePageMeta.hero_description}
             cover={homePageMeta.hero_cover_image}
