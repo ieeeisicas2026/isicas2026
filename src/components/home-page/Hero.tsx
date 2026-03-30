@@ -8,6 +8,8 @@ import type {
 import type { ClientConfig } from '@thebcms/client';
 
 interface Props {
+    counter_date: PropValueDateData;
+    counter_description: string;
     gallery: PropMediaDataParsed[];
     description: PropRichTextDataParsed;
     cover: PropMediaDataParsed;
