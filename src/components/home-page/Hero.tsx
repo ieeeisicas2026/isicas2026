@@ -4,6 +4,7 @@ import { BCMSImage } from '@thebcms/components-react';
 import type {
     PropMediaDataParsed,
     PropRichTextDataParsed,
+    PropValueDateData,
 } from '@thebcms/types';
 import type { ClientConfig } from '@thebcms/client';
 
