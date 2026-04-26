@@ -21,10 +21,20 @@ const sliderOptions = {
 
 interface Props {
     title: string;
-    days: AgendaDayGroup[];
+    days?: AgendaDayGroup[];
 }
 
 const HomeAgenda: React.FC<Props> = ({ title, days }) => {
+    if (!days) {
+        return (
+            <section>
+                <div id="agenda" className="scroll-mt-24 md:scroll-mt-32 leading-none tracking-[-0.02em] font-semibold text-center lg:text-5xl lg:leading-none">
+                    <h2>{title}</h2>
+                </div>
+            </section>
+        );
+    }
+
     const [agendaSwiper, setAgendaSwiper] = useState<SwiperClass | null>(null);
 
     const handleAgendaSwiperInit = (swiper: SwiperClass) => {
