@@ -10,7 +10,7 @@ import type { ClientConfig } from '@thebcms/client';
 
 interface Props {
     counter_date: PropValueDateData;
-    counter_description: string;
+    counter_description?: string;
     gallery: PropMediaDataParsed[];
     description: PropRichTextDataParsed;
     cover: PropMediaDataParsed;
@@ -86,9 +86,11 @@ const HomeHero: React.FC<Props> = ({
                         <div className="text-[16px] leading-none tracking-[-0.41px] font-light text-white mb-3 lg:text-[50px] lg:leading-none lg:mb-8 drop-shadow-xl text-shadow-lg">
                             The IEEE International Symposium on Integrated Circuits and Systems
                         </div>
+                        {counter_description ? (
                         <div className="text-sm leading-none tracking-[-0.41px] text-white lg:text-2xl lg:leading-none drop-shadow-lg text-shadow-lg">
                             <span className="font-bold">{timerOutput}</span> {counter_description} 
                         </div>
+                        ) : null}
                     </div>
                 </div>
                 <BCMSImage
